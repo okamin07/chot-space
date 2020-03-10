@@ -28,3 +28,11 @@
         .text
           確かにそっすね
   .form
+    .form__box
+      .input-box
+        %input.text{name:"text",placeholder:"type a message",type:"text"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input.file{type: "file"}
+      %input.submit{name:"button",type:"submit",value:"Send"}
+    

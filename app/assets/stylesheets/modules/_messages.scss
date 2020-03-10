@@ -5,6 +5,7 @@ $white:#ffffff;
 $navy:#253141;
 $lblue:#2f3e51;
 $gray:#fafafa;
+$lightblue:#38aef0;
 
 .wrapper{
   display:flex;
@@ -25,10 +26,4 @@ $gray:#fafafa;
 .messages{
   background-color:$gray;
   height:calc(100vh - 190px);
-}
-
-.form{
-  background-color:#d2d2d2;
-  height:90px;
-  width:calc(100vw - 300px)
 }
