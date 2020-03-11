@@ -2,8 +2,7 @@
   background-color:#d2d2d2;
   height:90px;
   width:calc(100vw - 300px);
-  padding-right:40px;
-  padding-left:40px;
+  @include pad40;
   display:flex;
   align-items: center;
   &__box{
