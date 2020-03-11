@@ -1,0 +1,12 @@
+$white:#ffffff;
+$navy:#253141;
+$lblue:#2f3e51;
+$gray:#fafafa;
+$lightblue:#38aef0;
+$black:#333333;
+$lightgray:#999999;
+
+@mixin pad40 {
+  padding-right:40px;
+  padding-left:40px;
+}
