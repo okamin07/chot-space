@@ -20,11 +20,16 @@
       .icon{
         list-style: none;
         width:60px;
-        text-align: right;
-        }
-        .contents__btn{
+        display:flex;
+        align-items: center;
+        justify-content:flex-end;
+      }
+      .contents__btn{
+          float:left;
+          list-style:none;
           text-decoration: none;
           color:$white;  
+          margin-left:5px;
         }
       }
     }
