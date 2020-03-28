@@ -1,38 +1,31 @@
 .mainchat
   .mainchat__header
     .group-top
-      大根
+      = @group.name
       %ul.member
         Member：
-        %li 友達
+        - @group.users.each do |users|
+          = users.name
     .group-edit
-      = link_to "#" do
+      = link_to edit_group_path(@group) do
         Edit
   .messages
-    .message
-      .message__top
-        .user
-          おかみん
-        .time
-          2020/03/10(Tue) 20:00
-      .message__bottom
-        .text
-          わりと帰りたい
-    .message
-      .message__top
-        .user
-          ます子
-        .time
-          2020/03/10(Tue) 20:01
-      .message__bottom
-        .text
-          確かにそっすね
+    = render @messages    #- @messages.each do |message|と同義
+
   .form
-    .form__box
+    = form_for [@group, @message] do |f|
       .input-box
-        %input.text{name:"text",placeholder:"type a message",type:"text"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input.file{type: "file"}
-      %input.submit{name:"button",type:"submit",value:"Send"}
-    
+        .formbox
+          = f.text_field :content, class: 'text', placeholder: 'type a message'
+          = f.label :image, class: 'image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'file'
+        = f.submit 'Send', class: 'submit'
+  -# .form
+  -#   .form__box
+  -#     .input-box
+  -#       %input.text{name:"text",placeholder:"type a message",type:"text"}
+  -#       %label{class: "input-box__image"}
+  -#         = icon('fas', 'image')
+  -#         %input.file{type: "file"}
+  -#     %input.submit{name:"button",type:"submit",value:"Send"}

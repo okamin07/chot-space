@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .wrapper{
@@ -21,4 +22,5 @@
 .messages{
   background-color:$gray;
   height:calc(100vh - 190px);
+  overflow: scroll;
 }
